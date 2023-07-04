@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Passion One";
+    src: local("Passion One"), url(fontes/Passion_One/PassionOne-Regular.ttf);
+}
+@font-face {
+    font-family: Sriracha;
+    src: local(Sriracha), url(fontes/Sriracha/Sriracha-Regular.ttf);
+}
+
+:root{
+    --fontePassion: "Passion One";
+    --fonteSriracha: Sriracha;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body {
+    min-height: 100vh; /*100% da viewport height*/
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1{
+    font-size: 8vw; /*Tamanho em largura se adapta a viewport da tela, nesse caso, 08% dela.*/
+    padding-top: 40px;
+    font-variant: small-caps;
+    font-family: var(--fontePassion);
+}
+header > p{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.5em;
+    padding-left: 30px;
+    font-family: var(--fonteSriracha);
+    font-size: 3vw;
+}
+
+section.normal{
+    background-color: white;
+}
+
+section > p {
+    padding-bottom: 1.5em;
+}
+section.imagem {
+    box-shadow: inset 6px 6px 12px 0px rgba(0, 0, 0, 0.301);
+    background-attachment: fixed;
+    background-position: right center;
+
+}
+section.imagem > p{
+    display: inline-block;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.575);
+    color: white;
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+    
+}
+
+section#imagem-flor {
+    background-image: url(../imagens/background001.jpg);
+    
+}
+section#imagem-livro {
+    background-image: url(../imagens/background002.jpg);
+    
+}
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 10px;
+    padding: 10px;
+    font-size: 1.3vw;
+    font-family: var(--fontePassion);
+}
